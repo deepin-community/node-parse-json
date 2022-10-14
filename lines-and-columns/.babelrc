@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "syntax-class-properties",
+    "transform-es2015-block-scoping",
+    "transform-flow-strip-types",
+    "transform-strict-mode",
+    "transform-class-properties",
+    "transform-es2015-classes",
+    "transform-es2015-destructuring",
+    "transform-es2015-shorthand-properties"
+  ]
+}

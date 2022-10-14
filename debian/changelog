@@ -1,0 +1,115 @@
+node-parse-json (5.1.0+~cs5.1.6-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Update minimum version of mocha to 8.0 (for type definitions)
+
+  [ Yadd ]
+  * Fix GitHub tags regex
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix filenamemangle
+  * Drop dependency to deprecated node-typescript-types (Closes: #979801)
+  * Fix test (error message changed) (Closes: #997594)
+
+ -- Yadd <yadd@debian.org>  Tue, 26 Oct 2021 09:27:54 +0200
+
+node-parse-json (5.1.0+~cs5.1.6-2) unstable; urgency=medium
+
+  * Team upload.
+
+  * (build-)depend on recent node-babel-code-frame
+    (not node-babel7)
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 18 Dec 2020 18:06:09 +0100
+
+node-parse-json (5.1.0+~cs5.1.6-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.1
+  * Add ctype=nodejs to component(s)
+  * Embed typescript definitions and repack
+  * Update build, build depends on mocha (@types/mocha)
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 06 Dec 2020 13:49:33 +0100
+
+node-parse-json (5.1.0+~1.1.6-2) unstable; urgency=medium
+
+  * Team upload
+  * Add build dependency to mocha (@types/mocha) (Closes: #973117)
+  * Use dh-sequence-nodejs
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 27 Oct 2020 19:31:32 +0100
+
+node-parse-json (5.1.0+~1.1.6-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 13
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Replace embedded @babel/* modules by dependency to node-babel7
+  * New upstream version 5.1.0+~1.1.6
+  * Update patch
+  * Revert upstream change (json-parse-even-better-errors instead of
+    json-parse-better-errors to log)
+  * Add dependency to node-typescript-types
+  * Remove useless lintian overrides
+  * Update copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 03 Sep 2020 15:28:16 +0200
+
+node-parse-json (5.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Build "lines-and-columns" component using pkg-js-tools 0.9
+  * Back to unstable after successful ci.debian/net tests (Closes: #907599)
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 13 Aug 2019 21:58:23 +0200
+
+node-parse-json (5.0.0-1) experimental; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.0
+  * Change section to javascript
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Switch upstream test from ava to tape
+  * New upstream version 5.0.0
+  * Embed lines-and-columns
+  * Embed temporarily:
+    - @babel/code-frame
+    - @babel/highlight
+    - @types/jest
+    - @types/jest-diff
+  * Update dependencies:
+    - Add node-assert, node-chalk, node-esutils, node-js-tokens and
+      node-json-parse-better-errors
+    - Update node-error-ex minimal version to 1.3.2~
+    - Add node-assert and node-typescript in build dependencies
+  * pkg-js-tools:
+    - add links between components in debian/nodejs/component_links
+    - link assert during lines-and-columns build in
+      debian/nodejs/lines-and-columns/extlinks
+    - enable upstream test
+    - switch install
+  * debian/rules:
+    - add override to build lines-and-columns component
+  * Update VCS fields
+  * Update debian/copyright
+  * Update lintian overrides
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 08 Aug 2019 14:47:54 +0200
+
+node-parse-json (2.2.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #842189)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 27 Oct 2016 00:32:37 +0530

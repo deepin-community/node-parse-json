@@ -1,0 +1,17 @@
+version=4
+opts=\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-parse-json-$1/ \
+ https://github.com/sindresorhus/parse-json/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+opts=\
+dversionmangle=auto,\
+ctype=nodejs,\
+component=lines-and-columns,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-lines-and-columns-$1/ \
+ https://github.com/eventualbuddha/lines-and-columns/releases .*/archive/.*/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-parse-json,ctype=nodejs,pgpmode=none" \
+ https://registry.npmjs.org/@types/parse-json https://registry.npmjs.org/@types/parse-json/-/parse-json-([\d\.]+)@ARCHIVE_EXT@ checksum

@@ -1,0 +1,5 @@
+lines-and-columns/dist/
+lines-and-columns/src/index.d.ts
+lines-and-columns/src/index.js
+lines-and-columns/test/test.d.ts
+lines-and-columns/test/test.js

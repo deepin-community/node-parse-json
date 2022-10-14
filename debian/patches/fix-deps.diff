@@ -1,0 +1,26 @@
+Description: keep json-parse-better-errors instead of json-parse-even-better-errors
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-09-03
+
+--- a/index.js
++++ b/index.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ const errorEx = require('error-ex');
+-const fallback = require('json-parse-even-better-errors');
++const fallback = require('json-parse-better-errors');
+ const {default: LinesAndColumns} = require('lines-and-columns');
+ const {codeFrameColumns} = require('@babel/code-frame');
+ 
+--- a/test.js
++++ b/test.js
+@@ -1,7 +1,7 @@
+ const test = require('tape')
+ const parseJson = require('.');
+ 
+-const jsonErrorRegex = /Unexpected token "}".*in foo\.json/;
++const jsonErrorRegex = /Unexpected token "?}"?.*in foo\.json/;
+ 
+ test('main', t => {
+ 	t.ok(parseJson('{"foo": true}'));
