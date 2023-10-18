@@ -1,0 +1,15 @@
+Description: fix version
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-03-27
+
+--- a/lines-and-columns/package.json
++++ b/lines-and-columns/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "lines-and-columns",
+-  "version": "0.0.0-dev",
++  "version": "1.1.7",
+   "description": "Maps lines and columns to character offsets and back.",
+   "keywords": [
+     "lines",

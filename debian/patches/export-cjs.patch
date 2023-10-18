@@ -1,0 +1,22 @@
+Description: export commonjs files
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-02-10
+
+--- a/lines-and-columns/package.json
++++ b/lines-and-columns/package.json
+@@ -17,8 +17,12 @@
+   },
+   "license": "MIT",
+   "author": "Brian Donovan <brian@donovans.cc>",
+-  "type": "module",
+-  "exports": "./build/index.mjs",
++  "main": "./build/index.js",
++  "module": "./build/index.mjs",
++  "exports": {
++    "import": "./build/index.mjs",
++    "require": "./build/index.js"
++  },
+   "types": "./build/index.d.ts",
+   "files": [
+     "build"

@@ -6,10 +6,9 @@ filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-parse-json-$1/ \
 
 opts=\
 dversionmangle=auto,\
-ctype=nodejs,\
 component=lines-and-columns,\
 filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-lines-and-columns-$1/ \
- https://github.com/eventualbuddha/lines-and-columns/releases .*/archive/.*/v?([\d\.]+).tar.gz checksum
+ https://github.com/eventualbuddha/lines-and-columns/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
 
 # It is not recommended use npmregistry. Please investigate more.
 # Take a look at https://wiki.debian.org/debian/watch/

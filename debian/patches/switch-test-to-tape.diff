@@ -1,17 +1,17 @@
 Description: Switch test to tape
 Author: Xavier Guimard <yadd@debian.org>
 Forwarded: not-needed
-Last-Update: 2019-08-08
+Last-Update: 2022-02-10
 
 --- a/test.js
 +++ b/test.js
-@@ -1,10 +1,10 @@
+@@ -1,16 +1,15 @@
 -import test from 'ava';
 -import parseJson from '.';
 +const test = require('tape')
 +const parseJson = require('.');
  
- const jsonErrorRegex = /Unexpected token "}".*in foo\.json/;
+ const jsonErrorRegex = /Unexpected token "?}"?.*in foo\.json/;
  
  test('main', t => {
 -	t.truthy(parseJson('{"foo": true}'));
@@ -19,9 +19,24 @@ Last-Update: 2019-08-08
  
  	t.throws(() => {
  		parseJson('{\n\t"foo": true,\n}');
-@@ -34,4 +34,5 @@
+ 	}, {
+ 		name: 'JSONError',
+-		message: /Unexpected token "}"/
+ 	});
+ 
+ 	t.throws(() => {
+@@ -34,12 +33,12 @@
  			throw error;
  		}
  	}, jsonErrorRegex);
 +  t.end();
+ });
+ 
+ test('throws exported error error', t => {
+ 	t.throws(() => {
+ 		parseJson('asdf');
+-	}, {
+-		instanceOf: parseJson.JSONError
+ 	});
++    t.end();
  });

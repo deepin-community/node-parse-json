@@ -17,7 +17,6 @@ Build-Depends: debhelper-compat (= 13)
  , node-tape <!nocheck>
  , node-typescript
  , node-types-node
- , nodejs
 Standards-Version: 4.6.0
 Vcs-Browser: https://salsa.debian.org/js-team/node-parse-json
 Vcs-Git: https://salsa.debian.org/js-team/node-parse-json.git
@@ -34,7 +33,6 @@ Depends: ${misc:Depends}
  , node-esutils
  , node-js-tokens
  , node-json-parse-better-errors
- , nodejs
 Provides: ${nodejs:Provides}
 Description: parse JSON with more helpful errors
  Node.js is an event-based server-side JavaScript engine.
