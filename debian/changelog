@@ -1,3 +1,13 @@
+node-parse-json (5.2.0+~cs5.1.7-1) unstable; urgency=medium
+
+  * Team upload
+  * Drop nodejs dependency
+  * New upstream version 5.2.0+~cs5.1.7
+  * Refresh patches
+  * Refresh build
+
+ -- Yadd <yadd@debian.org>  Sun, 27 Mar 2022 09:06:46 +0200
+
 node-parse-json (5.1.0+~cs5.1.6-3) unstable; urgency=medium
 
   * Team upload

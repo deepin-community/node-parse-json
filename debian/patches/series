@@ -1,3 +1,5 @@
-switch-test-to-tape.diff
 fix-deps.diff
-fix-test.patch
+export-cjs.patch
+fix-lines-and-columns-import.patch
+switch-test-to-tape.diff
+fix-version.patch

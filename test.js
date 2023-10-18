@@ -35,3 +35,11 @@ test('main', t => {
 		}
 	}, jsonErrorRegex);
 });
+
+test('throws exported error error', t => {
+	t.throws(() => {
+		parseJson('asdf');
+	}, {
+		instanceOf: parseJson.JSONError
+	});
+});

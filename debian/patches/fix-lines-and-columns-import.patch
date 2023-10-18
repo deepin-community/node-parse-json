@@ -1,0 +1,16 @@
+Description: fix lines-and-columns import
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-02-10
+
+--- a/index.js
++++ b/index.js
+@@ -1,7 +1,7 @@
+ 'use strict';
+ const errorEx = require('error-ex');
+ const fallback = require('json-parse-better-errors');
+-const {default: LinesAndColumns} = require('lines-and-columns');
++const {LinesAndColumns} = require('lines-and-columns');
+ const {codeFrameColumns} = require('@babel/code-frame');
+ 
+ const JSONError = errorEx('JSONError', {
